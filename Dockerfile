@@ -1,7 +1,6 @@
 FROM alpine
 
-RUN apk --no-cache add mongodb-tools py3-pip && \
-    pip install s3cmd
+RUN apk --no-cache add mongodb-tools s3cmd
 
 COPY backup /usr/local/bin/
 COPY restore /usr/local/bin/
